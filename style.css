@@ -1,0 +1,300 @@
+/*
+To-do
+* paragraph and headers resize with view port
+* height of main-header
+* center text in main-header
+- add urls to links
+- make about page
+* update drop down menu with links
+* add a link at top for posts
+    - how to link to parts of the same page
+* add drop down menu for posts
+* add link in drop down for posts
+- open links in new tabs
+- fix off window click for menu
+- rss feed
+
+
+*/
+
+* {
+  font-family: Oxygen;
+}
+
+body {
+    background-color: #27282B;
+}
+.mainPhoto{
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3px;
+
+}
+section{
+    background-color:#3B5998;
+    margin:auto;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 790px;
+    align:center;
+
+}
+
+h1 {
+color: rgb(255, 255, 255);
+font-size: 1.875em;
+margin-top: 15px;
+margin-bottom: auto;
+}
+
+p {
+color: rgb(255, 255, 255);
+}
+
+
+/* Style the upper portion of the Header */
+
+.header-top {
+  background-color: #27282B;
+  height:40px;
+  margin:auto;
+  width: 900px;
+
+}
+
+.header a{
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.header a:hover{
+  opacity:0.7;
+}
+
+.about {
+  line-height: 50px;
+}
+
+.header a.blog{
+  color: rgb(144, 144, 144);
+}
+
+.post-history {
+  color: rgb(144, 144, 144);
+  cursor: pointer;
+  display: inline;
+  margin-left: 15px;
+  position: relative;
+}
+
+.post-history button{
+  background-color: rgba(255, 255, 255, 0);
+  border:none;
+  font-size: 1em;
+  color: rgb(144, 144, 144);
+  cursor: pointer;
+}
+
+.post-history.active > .drop-down-link,
+.post-history button:hover{
+  opacity:0.7;
+}
+
+.post-drop-down{
+  background-color: #070707;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.8 );
+  display:block;
+  left:0;
+  min-width: 300px;
+  opacity:0;
+  overflow: auto;
+  padding: 5px;
+  pointer-events:none;
+  position:absolute;
+  top:calc(100% + .25rem);
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out transform 150ms ease-in-out;
+  z-index:15;
+}
+
+.post-drop-down a{
+  display: block;
+  margin:5px;
+  color: rgb(144, 144, 144);
+}
+
+.post-history.active > .drop-down-link + .post-drop-down {
+  opacity:1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+  .buttons {
+    float: right;
+    height: 15px;
+  }
+
+
+/* Style the lower portion of the Header */
+.header-bottom {
+    /* position: relative; */
+    background-color: #78C3C7;
+    padding: 5px 3px;
+    border-radius: 10px;
+    height: 90px;
+    width:900px;
+    margin: auto;
+    display:block;
+
+  }
+
+  .header-bottom a {
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    padding: 0px;
+    line-height:90px;
+    padding-left: 7px;
+  }
+
+  .header-bottom a.title{
+    font-size: 2.1875em;
+    font-weight: bold;
+    pointer-events: none;
+  }
+  .mobile-dropdown{
+    float:right
+  }
+
+  .container {
+    padding: 10px;
+    cursor: pointer;
+    display:none; 
+    margin-top:3%;
+    /* position:absolute; */
+    /* display:block; */
+
+  }
+
+  .container:hover, .container:focus {
+    background-color:#5a9295
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    padding: 5px;
+    right: 0;
+    background-color: #070707;
+    overflow: auto;
+    min-width: 160px;
+    border-radius: 5%;
+}
+.mobile-menu a {
+    line-height:35px;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    display: block;
+    
+}
+
+  .change .mobile-menu {
+    display:block;
+  }
+
+  .mobile-dropdown.active > .container + .mobile-menu {
+    opacity:1;
+    /* transform: ; */
+    pointer-events: auto;
+  }
+  
+  .mobile-buttons a {
+    display:inline-block;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    padding:0px;
+  }
+
+  
+
+  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+  @media screen and (max-width:900px) {
+    .header-bottom {
+        width:auto;
+        height: 9.25vh;
+    }
+    .header-top{
+        width:auto;
+    }
+    
+  }
+  
+  @media screen and (max-width:800px) {
+    section, 
+    .header-bottom {
+        width: auto;
+    }
+
+    .header-bottom a.title{
+        font-size: 4.4vw;
+
+      }
+
+    p{
+        font-size: 2vw;
+    } 
+
+    h1{
+        font-size: 4.2vw;
+    }
+
+  }
+  
+  @media screen and (max-width: 500px) {
+    
+    .header-top{
+        display:none;
+    }
+    .header-bottom {
+        height: 60px;
+        padding-left: 2px;
+    }
+    .header-bottom  a.title{
+        line-height: 60px;
+
+      }
+    .dropmain-headerdown a {
+        line-height: 60px;
+    }
+    .container {
+        display:inline-block;
+        margin-top:.5%;
+    }
+  }
+
+
+
