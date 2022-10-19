@@ -9,7 +9,7 @@
 //   }
 // }
 // customElements.define('custom-par',BlogDiv);
-
+ 
 let title = document.title;
 
 var headerTopBlog = `<a href="index.html" class="about"> Blog </a>`;
