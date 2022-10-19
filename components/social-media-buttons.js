@@ -41,7 +41,7 @@ connectedCallback() {
   
   <a href="https://github.com/Jordan-Gallivan" class="fa fa-github" target="_blank"></a>
   <a href="https://www.linkedin.com/in/jordan-gallivan/" class="fa fa-linkedin" target="_blank"></a>
-  <a href="components/feed.xml" class="fa fa-feed" target="_blank"></a>
+  <a href="feed.xml" class="fa fa-feed" target="_blank"></a>
 
   `;
 }
