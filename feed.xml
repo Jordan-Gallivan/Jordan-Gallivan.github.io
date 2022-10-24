@@ -4,7 +4,25 @@
   <updated>2022-10-19T16:07:27-08:00</updated>
   <id>https://jordangallivan.dev/feed.xml</id>
   <title type="html">jordangallivan.dev</title>
+  
+  <!-- First Entry -->
+  <entry>
+		<title>Now for Some Automation</title>
+		<link href="https://jordangallivan.dev/#Now_for_Some_Automation" />
+		<link rel="alternate" type="text/html" href="https://jordangallivan.dev/"/>
+        <published>2022-10-24T01:15:40Z</published>
+		<updated>2022-10-24T01:15:40Z</updated>
+		<summary>Details on a python program I wrote to help me update my blog</summary>
+        <content type="html">
+        <p>When I decided to make my own website, it was important to me to do it from scratch.  It’s foolish at times to reinvent the wheel and can even be looked at unfavorably, but this was first and foremost a learning experience for me.  Needless to say, I learned a tremendous amount along the way. </p>
+<p>One of the pitfalls of doing it your own way is simple things like updating a blog entry can become cumbersome.  For each entry I had to update three files (the HTML for the index, the XML for the feed, and the javascript for the drop down menu in the header).  This would require some copy/pasting and wouldn’t be too complicated, but it left it open to mistakes.  In the continuing effort to learn I set out to make a program to automate the updating of these three files and am really excited at how it turned out.  I’ve posted the code to my github (link in the top right corner) and a short synopsis is below</p>
+<p>In each of the three files that would need to be updated I added a “catch comment” that would serve as the anchor point for me to insert the required code for each blog entry.  The HTML and XML simply required me to generate some tags around the content and write it into the file at that location.  The javascript was slightly more complicated and required me to add a key:value pair to the object being used in the drop down menu.  For that I located the “{“ and concatenated the strings around the new key:value pair.  It’s been a little while since I wrote python so I was excited to get back into it.  Feel free to check out it out! </p>
 
+		</content>
+		<author>
+			<name>Jordan Gallivan</name>
+		</author>
+        </entry>  
   <entry>
 		<title>How did I get here</title>
 		<link href="https://jordangallivan.dev/#How_did_I_get_here" />
@@ -12,7 +30,7 @@
       <published>2022-10-18T17:23:02Z</published>
 		<updated>2022-10-18T17:23:02Z</updated>
 		<summary>Initial blog post for jordangallivan.dev</summary>
-		<content type="html">
+    <content type="html">
         <p> It's hard to complain when you get to ride in the back seat of a fighter jet.  
             Despite how awesome that part of the job was, it never made me truly happy.  
             As my 10-year career in the Marine Corps came to an end, I knew it was time for a change.  
