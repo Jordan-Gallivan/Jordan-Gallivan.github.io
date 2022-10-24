@@ -1,7 +1,7 @@
-const blogs =[`How_did_I_get_here?`,`It_cant_be_that_hard`];
 let blogLinks = [];
 
-const blogObject = {How_did_I_get_here: "18 Oct 2022",
+// Post Object Location
+const blogObject = {Now_for_Some_Automation:"24 Oct 2022",How_did_I_get_here: "18 Oct 2022",
 It_cant_be_that_hard: "18 Oct 2022"};
 
 for(title in blogObject) {
