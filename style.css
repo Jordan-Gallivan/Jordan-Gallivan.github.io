@@ -213,6 +213,21 @@ section a{
   color: white;
 }
 
+  .videos{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:0;
+    height: 315px;
+  }
+  iframe.ghost{
+    display:none
+  }
+  iframe.presentation{
+    width: 60%;
+    height: 100%;
+    /* height:fit-content; */
+    margin-left:20%;
+  }
   h1 {
     color: rgb(255, 255, 255);
     font-size: 1.875em;
@@ -291,6 +306,9 @@ section a{
   h1{
     font-size: 4.2vw;
   }
+  .videos{
+    height: 220px;
+  }
 
 }
 
@@ -316,6 +334,9 @@ section a{
   .container {
     display:inline-block;
     margin-top:.5%;
+  }
+  .videos{
+    height: auto;
   }
 }
 
