@@ -238,7 +238,33 @@ section a{
   p {
   color: rgb(255, 255, 255);
   }
-  
+
+  /* Style Course Review */
+  .course-review {
+    position:relative;
+    text-align: center;
+    margin-top: 15px;
+  }
+    .course-review-photo {
+      position: relative;  
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 3px;
+    }
+    .text-overlay {
+      position: absolute;
+      padding-bottom: 5%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+    }
+    .text-overlay a{
+      color: rgb(144, 144, 144);
+      font-size: 1.75em;
+      text-decoration: none;
+    }
+
   /* Sytle code examples */
   .code-box {
     background-color: #1E1E1E;

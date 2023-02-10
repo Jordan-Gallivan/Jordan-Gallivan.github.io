@@ -1,3 +1,5 @@
+// Header Content
+
 let title = document.title;
 
 var headerTopBlog = `<a href="index.html" class="about"> Blog </a>`;
@@ -75,3 +77,10 @@ class Header extends HTMLElement {
 
 customElements.define('header-content',Header);
 
+// Image Functions
+function hover(img){
+  img.src = "images/ShadedUNF.JPG"
+}
+function hoverOut(img){
+  img.src = "images/UNF.JPG"
+}
