@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.open-post {
+    position: fixed;
+    display: block;
+    top: 55%;
+    left: 50%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    transform-origin: top right;
+    z-index: 100;
+    background-color: var(--scheme-blue);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    height: 80vh;
+    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, .5);
+}
+.open-post.desktop {
+    width: 1232px;
+    animation-name: postAnimation-desktop;
+    animation-duration: 50ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+}
+.open-post.tablet,
+.open-post.mobile {
+    width: 95vw;
+    animation-name: postAnimation-tablet;
+    animation-duration: 50ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.open-post-title {
+    text-align: center;
+    color: var(--scheme-white);
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: relative;
+    padding: 0 36px;
+}
+.close-button {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    color: var(--scheme-dark-blue);
+}
+.close-button:hover {
+    color: var(--scheme-gray);
+}
+
+.open-post-content {
+    height: 92%;
+    overflow-y: scroll;
+    text-align: center;
+}
+.post-image {
+    max-width: 90%;
+    margin: 0.5rem auto 0.5rem auto;
+}
+.open-post-text {
+    text-align: left;
+}
+.open-post-text h1{
+    margin: 0.5rem 0;
+}
+.open-post-text p{
+    margin: 0.5rem 0;
+}
+.open-post-text a {
+    color: var(--scheme-white);
+    text-decoration: none;
+}
+.open-post-text a:hover {
+    color: var(--scheme-gray);
+}

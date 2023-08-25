@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.top-post-container{
+    display: inline;
+    overflow: hidden;
+    background-color: var(--scheme-blue);
+    margin: 1rem 1rem 0rem 0.5rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    float: right;
+    position: relative;
+    text-align: center;
+}
+.top-post-container:after {
+    content:'';
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    background:linear-gradient(transparent 250px, var(--scheme-blue));
+}
+.top-post-container:hover:after {
+    background:linear-gradient(transparent 250px, var(--scheme-gray));
+}
+.top-post-container.desktop {
+    width: 582px;
+    height: 460px;
+}
+.top-post-container.tablet {
+    width: 45vw;
+    height: 35.5vw;
+}
+.top-post-container.mobile {
+    width: 95vw;
+    height: 70vw;
+}
+
+
+.post-container{
+    display: inline;
+
+    overflow: hidden;
+    background-color: var(--scheme-blue);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    float: right;
+    position: relative;
+}
+.post-container.desktop {
+    width: 390px;
+    height: 380px;
+}
+.post-container.tablet {
+    width: 45vw;
+    height: 35.5vw;
+}
+.post-container.mobile {
+    width: 95vw;
+    height: 70vw;
+
+}
+
+.post-container:after {
+    content:'';
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    background:linear-gradient(transparent 150px, var(--scheme-blue));
+}
+
+.top-post-container:hover,
+.post-container:hover{
+    background-color: var(--scheme-gray);
+}
+.post-container:hover:after{
+    background:linear-gradient(transparent 250px, var(--scheme-gray));
+}
+
+
+
+.post-image {
+    border-radius: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.post-title{
+    color: var(--scheme-white);
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0.5rem 0 0.5rem 0;
+}
+.post-content p {
+    text-overflow: fade;
+    word-wrap: normal;
+}
+.post-content a {
+    color: var(--scheme-white);
+    text-decoration: none;
+}
+
+.click-to-read {
+    color: snow;
+    padding: 5px;
+    position: absolute;
+    bottom: 15px;
+    z-index: 50;
+    background-color: rgba(68, 75, 56, 0.8);
+    border-radius: 5px;
+    pointer-events: none;
+    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, .5);
+}
+.click-to-read.desktop {
+    left: calc(50% - 12ch);
+}
+.click-to-read.tablet,
+.click-to-read.mobile {
+     left: calc(50% - 8ch);
+ }

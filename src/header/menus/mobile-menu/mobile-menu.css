@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.mobile-menu-button,
+.mobile-menu-link {
+    padding: 0.5rem 1rem;
+}
+.mobile-menu-link {
+    padding-right: 2.5rem;
+}
+
+.button-arrow {
+    margin-left: 0.75rem;
+}
+
