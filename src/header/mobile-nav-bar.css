@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.menu-root {
+    position: relative;
+    vertical-align: bottom;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+}
+.menu-root.menu-visible {
+    background-color: rgba(46, 42, 46, 0.95);
+    border-radius: .25rem 0.25rem 0 0;
+}
+.menu-root.menu-visible button {
+    color: snow;
+}
+
+.menu-content {
+    position: absolute;
+    right: 0;
+    z-index: 1000;
+    text-align: right;
+    background-color: rgba(46, 42, 46, 0.95);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+    border-radius: .25rem 0 .25rem .25rem;
+    margin: 0;
+    flex-wrap: wrap;
+    padding: 0;
+}
+.menu-content a {
+    color: snow;
+    text-decoration: none;
+}
+.menu-content button {
+    color: snow;
+}
+
+.menu-content li {
+    width: 100%;
+    margin: 0;
+    list-style: none;
+    display: none;
+    opacity: 0;
+    animation-name: menuAnimation;
+    animation-duration: 100ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+.menu-content.tablet {
+    width: 300px;
+}
+.menu-content.mobile {
+    width: 100vw;
+    text-align: center;
+    right: -1rem;
+    border-top-right-radius: 0.25rem;
+    overscroll-behavior: contain;
+}
+.menu-content.mobile.selected{
+    height: calc(100vh - 4rem);
+    overflow-y: scroll;
+}

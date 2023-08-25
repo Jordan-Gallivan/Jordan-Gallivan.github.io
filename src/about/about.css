@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.about-photo {
+    width: 70%;
+    margin: 1rem auto;
+    border-radius: 1rem;
+}
+.about-photo.mobile {
+    width: 90%;
+}
+
+.about-text {
+    font-size: 1.25rem;
+}

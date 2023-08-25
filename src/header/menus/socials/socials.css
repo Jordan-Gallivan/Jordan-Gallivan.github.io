@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.socials {
+    display: inline-block;
+    width: 24px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 16px;
+    vertical-align: bottom;
+    padding-bottom: 4px;
+}
+.socials a{
+    display: block;
+    color: var(--scheme-green);
+    vertical-align: bottom;
+
+}
+.socials a:hover{
+    color: var(--scheme-gray)
+}

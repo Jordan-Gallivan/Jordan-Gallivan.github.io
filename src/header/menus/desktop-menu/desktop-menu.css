@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.navbar {
+    display: inline-block;
+}
+
+.menu-root {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.menu {
+    position: absolute;
+    top: calc(100%);
+    right: 0rem;
+    background-color: rgba(46, 42, 46, 0.95);
+    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, .1);
+    border-top-left-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+    margin: 0;
+    flex-wrap: wrap;
+    padding: 0rem;
+    width: 400%;
+    z-index: 9999;
+}
+
+.menu li {
+    width: 100%;
+    margin: .1rem;
+    list-style: none;
+    display: none;
+    opacity: 0;
+    animation-name: menuAnimation;
+    animation-duration: 100ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes menuAnimation {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.menu.sub {
+    width: 100%;
+    left: -100%;
+    top: 10%;
+}
+
+.menu-root-button,
+.menu-root-link {
+    display: flex;
+    align-items: center;
+    color: var(--scheme-dark-blue);
+    font-size: inherit;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0.75rem;
+    margin-left: 0.75rem;
+}
+
+.menu-root-button.child-active {
+    background-color: rgba(46, 42, 46, 0.95);
+    box-shadow: 0 0px 5px 0px rgba(0, 0, 0, .1);
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: var(--scheme-white)
+}
+
+.menu-root-button:hover,
+.menu-root-link:hover {
+    background-color: var(--scheme-gray);
+    color: var(--scheme-white);
+    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, .1);
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+.menu-root-link:hover{
+    border-radius: 0.25rem;
+}
+
+.menu-button,
+.menu-link {
+    display: block;
+    align-items: center;
+    color: var(--scheme-white);
+    font-size: inherit;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    list-style: none;
+    text-decoration: none;
+    padding: 01.0rem 0.75rem;
+}
+.menu-button{
+    width: 100%;
+    text-align: left;
+}
+
+.menu-button:hover,
+.menu-link:hover {
+    background-color: var(--scheme-gray);
+    color: var(--scheme-white);
+    border-radius: .25rem;
+}
