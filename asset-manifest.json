@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/blog/static/css/main.76c799d0.css",
-    "main.js": "/blog/static/js/main.ed3adef0.js",
-    "static/media/aboutImage.jpeg": "/blog/static/media/aboutImage.7ee445975d37dde3c70e.jpeg",
-    "static/media/mainPhoto.jpeg": "/blog/static/media/mainPhoto.f8e950c3f86590b4e17d.jpeg",
-    "static/media/UNF.JPG": "/blog/static/media/UNF.5c0a1039daa043e7258f.JPG",
-    "index.html": "/blog/index.html",
-    "main.76c799d0.css.map": "/blog/static/css/main.76c799d0.css.map",
-    "main.ed3adef0.js.map": "/blog/static/js/main.ed3adef0.js.map"
+    "main.css": "/Jordan-Gallivan.github.io/static/css/main.76c799d0.css",
+    "main.js": "/Jordan-Gallivan.github.io/static/js/main.02a7601b.js",
+    "static/media/aboutImage.jpeg": "/Jordan-Gallivan.github.io/static/media/aboutImage.7ee445975d37dde3c70e.jpeg",
+    "static/media/mainPhoto.jpeg": "/Jordan-Gallivan.github.io/static/media/mainPhoto.f8e950c3f86590b4e17d.jpeg",
+    "static/media/UNF.JPG": "/Jordan-Gallivan.github.io/static/media/UNF.5c0a1039daa043e7258f.JPG",
+    "index.html": "/Jordan-Gallivan.github.io/index.html",
+    "main.76c799d0.css.map": "/Jordan-Gallivan.github.io/static/css/main.76c799d0.css.map",
+    "main.02a7601b.js.map": "/Jordan-Gallivan.github.io/static/js/main.02a7601b.js.map"
   },
   "entrypoints": [
     "static/css/main.76c799d0.css",
-    "static/js/main.ed3adef0.js"
+    "static/js/main.02a7601b.js"
   ]
 }
