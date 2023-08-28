@@ -1,4 +1,5 @@
 import React, { ReactElement } from "react";
+import YoutubeEmbed from "../util/youtubeEmbed";
 
 export interface IPost {
   title: string,
@@ -7,13 +8,54 @@ export interface IPost {
   img?: ReactElement,
 }
 
-const postImage = ({src} : {src: string | undefined}): ReactElement => {
-  return (
-    <img src={src} className={"post-image"}/>
-  )
-}
-
 export const posts: IPost[] = [
+  {
+    title: "React’ing to TypeScript",
+    date: "28 August 2023",
+    post: (
+      <>
+        <p>
+          This summer my big personal project was learning to use React.  It was no small feat but I started out by picking up this book
+          <a href="https://www.amazon.com/JavaScript-Definitive-Most-Used-Programming-Language/dp/1491952024/ref=pd_bxgy_img_sccl_1/142-9381458-4556036?pd_rd_w=s5D4x&content-id=amzn1.sym.26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_p=26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_r=4GHB44Q4EP8CK4V01R7W&pd_rd_wg=a8T7h&pd_rd_r=def18f9e-1925-44bd-a477-35e6825d3d29&pd_rd_i=1491952024&psc=1" target="_blank"> JavaScript the Definitive Guide </a> and diving in head first.  I had a little extra free time, having left the family back in Jax so I was able to soak it all in, in about 3 weeks.  Then came React.  Once again, O’Reilly Books to the rescue with this masterpiece
+          <a href="https://www.amazon.com/Learning-React-Modern-Patterns-Developing/dp/1492051721/ref=sr_1_1?crid=1LAR437Q25JYL&keywords=react+o%27reilly&qid=1693253318&sprefix=react+orielly%2Caps%2C113&sr=8-1" target="_blank"> Learning React. </a>
+        </p>
+        <p>
+          I was fortunate enough to get some time writing TypeScript at my internship, so when I decided to embark on this journey,
+          I had the tough decision to make: do I just write the site in JavaScript and save myself the headache,
+          or do I put on my big boy pants and spend a lot of long nights arguing with my IDE on why it shouldn’t be throwing an error?
+          I decided on the latter and all I can saw was... woof.  It was a mess at first.
+          So. Many.  Errors.  But I pulled myself through the mess and learned a LOT.
+          I grew to love this handy scripting language and soon found comfort in the rigidity.  It kept me honest and made debugging so much easier.
+        </p>
+        <p>
+          I set to rewriting my blog in React and ran into a few fun issues along the way. First, CSS Animations be
+          damned.
+          The post opening looks so janky but it’ll have to do for now. Second, hosting on gh pages resulted in my react
+          router not working.
+          Fortunately, I only really have just two pages (home and about) so that was a relatively easy fix, plus I got
+          to incorporate React Context (YAY learning!).
+          I’m really happy with how it turned out, but more importantly, I’m really happy with all the tricks I picked
+          up along the way.
+          It was the first time I was able to re-use code from a site I’m building now (more to follow on that).
+        </p>
+        <p>
+          Enjoy the new site, and as always, swing by my <a href="https://github.com/Jordan-Gallivan/Jordan-Gallivan.github.io/tree/main" target="_blank"> Github</a> and check out what I did!
+        </p>
+      </>
+    ),
+    img: <img className={"post-image"} src={require('../images/girlfriend-ugly.gif')} alt={"Home Alone Gif"} />,
+  },
+  {
+    title: "Off to Seatle",
+    date: "05 May 2023",
+    post: (
+      <p>
+        I have some pretty awesome news; I’ve officially been selected for an internship as a Software Development Engineer Intern at Amazon Web Services!
+        It was a tumultuous couple months of applying for, being rejected for/interviewing for internships and to have it come through like this is a huge relief.
+        I cannot put into words how grateful I am for this opportunity and I cannot wait to get out there and learn as much as I can!
+      </p>
+    )
+  },
   {
     title: "A Review of My First Semester as a Post-Bacc Computer Science Major",
     date: "10 Feb 2023",
@@ -78,19 +120,16 @@ export const posts: IPost[] = [
         <p>The past month has been filled with applications for Software Engineering Internships and subsequent prepration for interviews.  Computer Science is one of the few fields where a candidate
           can be tested on the spot and expected to demonstrate compotency of the material they are supposed to know.  It is quite daunting but it is an excellent litmus test.  While I haven't taken a formal
           Data Structures course yet, I've been exposed to the concepts and have had to clean up some knowledge gaps on the side (huge shout out to
-          <a href="https://www.geeksforgeeks.org/data-structures/?ref=shm" target="_blank">geeks for geeks!</a>). I never thought I would enjoy preparing for a
+          <a href="https://www.geeksforgeeks.org/data-structures/?ref=shm" target="_blank"> geeks for geeks!</a>). I never thought I would enjoy preparing for a
           job interview but the tools and tricks I've learned along the way have kept me genuinely intrigued, hungry for more, and sometimes perplexed. </p>
         <p>My language of choice for interview prep is Python.  Its simplicity is paramount but I'm beginning to see the differences in the language and why others trend to Java and C++.
           Nevertheless, seeing someone write one line of code for a solution that you have written a novel for is eye opening, discouraging, and enlightening all at the same time!
           It's always a trip to see the most "Pythonic" solution to a problem...</p>
         <p>As the semester comes to an end, I'll be sure to provide a wrap up of the courses I've taken but in the interim, here is a presentation I did on one of the most influential people in the business,
           John Carmack.  He's the stuff of legend and his story is one every programmer should listen to.  One of the most important sources for the presentation was
-          <a href="https://lexfridman.com/john-carmack/" target="_blank">John Carmack's Interview with Lex Fridman.</a>
+          <a href="https://lexfridman.com/john-carmack/" target="_blank"> John Carmack's Interview with Lex Fridman.  </a>
           If you have the time to listen to it, I cannot recommend it enough.  Enjoy!</p>
-        {/*<div className={"videos"}>*/}
-        {/*  <iframe className={"ghost"} width={"560"} height={"315"} src={"https://www.youtube.com/embed/LV8EaFeq7wM"} frameBorder={"0"} allow={"encrypted-media"}></iframe>*/}
-        {/*  <iframe className={"presentation"} width={"560"} height={"315"} src={"https://www.youtube.com/embed/LV8EaFeq7wM"} title={"YouTube video player"} frameBorder={"0"} allow={"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"}></iframe>*/}
-        {/*</div>*/}
+        <YoutubeEmbed embedID={"LV8EaFeq7wM"} />
       </>
     ),
   },
@@ -104,7 +143,7 @@ export const posts: IPost[] = [
         <p>One of the pitfalls of doing it your own way is simple things like updating a blog entry can become cumbersome.  For each entry I had to update three files (the HTML for the index,
           the XML for the feed, and the javascript for the drop down menu in the header).  This would require some copy/pasting and wouldn’t be too complicated, but it left it open to mistakes.
           In the continuing effort to learn I set out to make a program to automate the updating of these three files and am really excited at how it turned out.
-          I’ve posted the code to my <a href="https://github.com/Jordan-Gallivan/Website-Maintenance--" target="_blank">Github</a> and a short synopsis is below:</p>
+          I’ve posted the code to my <a href="https://github.com/Jordan-Gallivan/Website-Maintenance--" target="_blank"> Github</a> and a short synopsis is below:</p>
         <p>In each of the three files that would need to be updated I added a “catch comment” that would serve as the anchor point for me to insert the required code for each blog entry.
           The HTML and XML simply required me to generate some tags around the content and write it into the file at that location.  The javascript was slightly more complicated and required me to add a
           key:value pair to the object being used in the drop down menu.  For that I located the “&#123;“ and concatenated the strings around the new key:value pair.  It's been a little while since I wrote python
@@ -122,12 +161,12 @@ export const posts: IPost[] = [
           As my 10-year career in the Marine Corps came to an end, I knew it was time for a change.
           What that change would be however, gave me quite a bit of consternation.
           So, I fell back on what has always given me a sense of satisfaction and accomplishment, coding.  </p>
-        <p>I had dabbled in coding projects since college, and it wasn’t until I sat down and committed to <a href="https://ocw.mit.edu/" target="_blank">MIT’s OpenCourseWare</a>
+        <p>I had dabbled in coding projects since college, and it wasn’t until I sat down and committed to <a href="https://ocw.mit.edu/" target="_blank"> MIT’s OpenCourseWare</a>
           introduction to programming course that I realized computer science is so much more than just writing lines of code.
           There’s a science (duh…) to it that goes deeper than conditionals and loops.  On top of all of that is the art of writing good code.  I found I genuinely enjoyed learning about the material and putting it to use in the
           <a href="https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/" target="_blank">MIT 6.0001</a>/
           <a href="https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/" target="_blank">2</a> problem sets.  </p>
-        <p>Then I tried my hand at the discrete math course, <a href="https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/" target="_blank">6.042</a>…
+        <p>Then I tried my hand at the discrete math course, <a href="https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/" target="_blank"> 6.042</a>…
           It was here that being out of college for over 10 years and the limitations of teaching myself smashed into me with unrelenting force.  I was enthralled by the material and felt like Matt
           Damon in Goodwill Hunting when I solved a problem, but many hours were spent trying to understand the concepts and even more were spent on trying to do the problem sets.   It was decided then;
           I would go back to college as a 34 year old, sit in the front of class and soak up as much as I could.  I chose University of North Florida because my wife is doing a Surgical Residency at
