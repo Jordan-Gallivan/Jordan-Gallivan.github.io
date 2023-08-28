@@ -1,9 +1,9 @@
 import { IPost, posts } from "../../posts/posts";
-import { FaSquareGithub as Git,
-  FaLinkedin as LinkedIn } from "react-icons/fa6";
+import { FaLinkedin as LinkedIn, FaSquareGithub as Git } from "react-icons/fa6";
 import { IconBaseProps } from "react-icons";
 import { ReactElement } from "react";
 import linkToPost from "../../util/link-to-post";
+import { PageTypes } from "../../util/constants";
 
 
 /**
@@ -17,15 +17,18 @@ export interface IMenuItem {
   name: string,
   url?: string,
   subMenus?: IMenuItem[],
+  pageNav?: PageTypes,
 }
 export const AboutMenus: IMenuItem[] = [
   {
-    name: "Home",
+    name: PageTypes.HOME,
     url: "/",
+    pageNav: PageTypes.HOME,
   },
   {
-    name: "About",
-    url: "about",
+    name: PageTypes.ABOUT,
+    url: "/",
+    pageNav: PageTypes.ABOUT,
   },
 ]
 

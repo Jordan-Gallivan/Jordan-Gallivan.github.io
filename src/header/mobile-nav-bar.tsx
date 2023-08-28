@@ -1,17 +1,19 @@
 import React, { useEffect, useRef, useState } from "react";
-import { HomeMenus } from "./menus/menus";
+import { AboutMenus, HomeMenus } from "./menus/menus";
 import "./mobile-nav-bar.css";
-import { CLOSE, MOBILE_MENU_SIZE } from "../util/constants";
+import { CLOSE, MOBILE_MENU_SIZE, PageTypes } from "../util/constants";
 import { MdOutlineClose as Close } from "react-icons/md";
 import { GiHamburgerMenu as Hamburger } from "react-icons/gi";
 import MobileMenu from "./menus/mobile-menu/mobile-menu";
 import { useDevice } from "../util/deviceHook";
+import { usePage } from "../util/pageHook";
 
 /**
  * Hamburger menu for mobile and tablet devices.
  */
 export default function MobileNavBar() {
   const deviceType = useDevice();
+  const {page} = usePage();
 
   const [menuVisible, setMenuVisible] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -45,7 +47,10 @@ export default function MobileNavBar() {
         <ul>
           <MobileMenu
             key={100}
-            items={HomeMenus}
+            items={
+              page === PageTypes.HOME
+              ? HomeMenus
+              : AboutMenus}
             menuVisible={menuVisible}
             depth={0}
             socials={true}

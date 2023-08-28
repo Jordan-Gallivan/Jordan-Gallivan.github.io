@@ -8,6 +8,6 @@ export enum DeviceTypes {
 }
 
 export enum PageTypes {
-  HOME = 'home',
-  ABOUT = 'about',
+  HOME = 'Home',
+  ABOUT = 'About',
 }

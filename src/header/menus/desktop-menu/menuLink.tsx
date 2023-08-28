@@ -1,5 +1,7 @@
 import React, { ReactElement } from "react";
 import { IMenuItem } from "../menus";
+import { usePage } from "../../../util/pageHook";
+import { PageTypes } from "../../../util/constants";
 
 /**
  * End point of menu or child menu.
@@ -10,15 +12,34 @@ import { IMenuItem } from "../menus";
 export default function MenuLink({item, depth, callBack}:
                                    {item: IMenuItem, depth: number, callBack: (f:any)=>any}) : ReactElement{
   let currDepth = depth + 1;
+  const {changePage} = usePage();
 
-  return (
-    <>
-      <a href={`${item.url}`}
-         className={ currDepth === 1
-           ? "menu-root-link"
-           : "menu-link"}
-         onClick={callBack}
-      >{item.name}</a>
-    </>
-  )
+  const updatePage = (page: PageTypes) => {
+    changePage(page);
+  }
+
+  if (item.name === PageTypes.HOME || item.name === PageTypes.ABOUT) {
+    return (
+      <button
+        key={currDepth}
+        type={"button"}
+        onClick={() => updatePage(item.pageNav || PageTypes.HOME)}
+        className={
+          `${currDepth ===1
+            ? "menu-root-button"
+            : "menu-button"}`}
+      >{item.name}</button>
+    )
+  } else {
+    return (
+      <>
+        <a href={`${item.url}`}
+           className={currDepth === 1
+             ? "menu-root-link"
+             : "menu-link"}
+           onClick={callBack}
+        >{item.name}</a>
+      </>
+    )
+  }
 }
