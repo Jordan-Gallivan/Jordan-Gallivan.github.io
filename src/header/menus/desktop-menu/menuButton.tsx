@@ -28,7 +28,7 @@ export default function MenuButton({item, depth}: {item: IMenuItem, depth: numbe
         >{item.name}</button>
         <ul
           className={`menu ${currDepth < 2 ? "" : "sub"}`}
-          style={{display: (hover ? "flex" : "flex")}}>
+          style={{display: "flex" }}>
           <Menu
             key={currDepth}
             items={item.subMenus}
