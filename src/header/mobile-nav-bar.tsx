@@ -12,7 +12,7 @@ import { usePage } from "../util/pageHook";
  * Hamburger menu for mobile and tablet devices.
  */
 export default function MobileNavBar() {
-  const deviceType = useDevice();
+  const device = useDevice();
   const {page} = usePage();
 
   const [menuVisible, setMenuVisible] = useState(false);
@@ -36,14 +36,14 @@ export default function MobileNavBar() {
   });
 
   return (
-    <div className={`menu-root ${deviceType} ${menuVisible ? "menu-visible" : ""}`}>
+    <div className={`menu-root ${device.deviceType} ${menuVisible ? "menu-visible" : ""}`}>
       <button className={"hamburger"}
               onClick={toggleMenu}>
         {menuVisible
           ? <Close size={MOBILE_MENU_SIZE}/>
           : <Hamburger size={MOBILE_MENU_SIZE}/>}
       </button>
-      <div ref={menuRef} className={`menu-content ${deviceType} ${menuVisible ? "selected" : ""}`}>
+      <div ref={menuRef} className={`menu-content ${device.deviceType} ${menuVisible ? "selected" : ""}`}>
         <ul>
           <MobileMenu
             key={100}

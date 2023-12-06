@@ -36,7 +36,7 @@ function ClickToRead({deviceType} : {deviceType: DeviceTypes}) : ReactElement {
  */
 export default function PostComponent({post, topRow, postOpen, callBack} : IPostComponentArgs) : ReactElement {
 
-  const deviceType = useDevice();
+  const device = useDevice();
   const [selected, setSelected] = useState(false);  // is this post currently selected for viewing
   const postRef = useRef<HTMLButtonElement>(null);  // ref to pass post pos/dim data to opened post component
 
@@ -91,8 +91,12 @@ export default function PostComponent({post, topRow, postOpen, callBack} : IPost
   // conditionally renders post component based on whether post includes an image
   return (
     <>
-      <button id={linkToPost(post.title)} ref={postRef} onClick={openPost} className={`${topRow ? "top-post-container" : "post-container"} ${deviceType}`}>
-        {post.img
+      <button
+        id={linkToPost(post.title)}
+        ref={postRef}
+        onClick={openPost}
+        className={`${topRow ? "top-post-container" : "post-container"} ${device.deviceType}`}
+      >{post.img
           ? <>
             {title}
             {post.img}
@@ -102,7 +106,7 @@ export default function PostComponent({post, topRow, postOpen, callBack} : IPost
             <div className={`post-content`}>{post.post}</div>
           </>
         }
-        <ClickToRead deviceType={deviceType}/>
+        <ClickToRead deviceType={device.deviceType}/>
       </button>
       {selected
         &&

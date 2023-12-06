@@ -28,12 +28,12 @@ interface IOpenPostArgs {
 export default function OpenPostComponent(
   {post, parentX, parentY, parentWidth, parentHeight, callBack} : IOpenPostArgs): ReactElement {
 
-  const deviceType = useDevice();
+  const device = useDevice();
 
   return (
     <>
         <CreateTransition parentX={parentX} parentY={parentY} parentWidth={parentWidth} parentHeight={parentHeight}/>
-        <div className={`open-post ${deviceType}`}>
+        <div className={`open-post ${device.deviceType}`}>
           <div className={`open-post-title`}>
             {post.title}
             <button onClick={callBack}><CloseButton className={"close-button"} size={"24px"}/></button>

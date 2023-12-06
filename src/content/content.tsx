@@ -11,7 +11,7 @@ import { useDevice } from "../util/deviceHook";
  */
 export default function Content({pageType} : {pageType: PageTypes}): ReactElement {
 
-  const deviceType = useDevice();
+  const device = useDevice();
 
   let content: ReactElement;
   switch (pageType) {
@@ -28,7 +28,7 @@ export default function Content({pageType} : {pageType: PageTypes}): ReactElemen
 
   return (
     <>
-      <div className={`content-container ${deviceType}`}>
+      <div className={`content-container ${device.deviceType} ${device.screenHeight}`}>
         {content}
       </div>
     </>

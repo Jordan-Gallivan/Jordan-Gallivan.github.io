@@ -10,6 +10,59 @@ export interface IPost {
 
 export const posts: IPost[] = [
   {
+    title: "Run Free",
+    date: "5 December 2023",
+    post: (
+      <>
+        <p>
+          My most recent project was jumping into the world of iOS Development utilizing Swift/SwiftUI.
+          Being the analog guy that I am, I picked up a copy of
+          <a href={"https://www.formasterminds.com/swiftui_for_masterminds_4th_edition/"}> SwiftUI for Masterminds </a>
+          and was pleasantly surprised with how great this book is. The examples are easy to follow, the accompanying
+          explanations are thorough and informative, and the cadence of the book is appropriate for all levels of developer.
+        </p>
+
+        <p>
+          In order to wet my whistle with app development I decided to put together something that would be challenging
+          and could showcase what I’ve learned. I settled on an all-in-one running app which allowed me to get
+          experience in a vast array of programming problems in Swift: Asynchronous methods, persistent storage using SwiftData,
+          application data using Observable Objects, fetch calls to APIs, JSON parsing, and lots and lots of Structs,
+          Classes, and Enums.
+        </p>
+
+        <p>
+          A quick aside: Swift is the most well thought out, well written languages I’ve used. The regular updates have
+          turned this language into a lasting mainstay in my opinion and have made it so versatile. You can really tell
+          how much work went into getting this language right and they managed to capture the best of other languages
+          like JavaScript, Java, and Python. Don’t get me wrong, I do miss my semicolons (they’re optional but
+          discouraged), but once you get the hang of a few nuances, you can go from 0 to comfortable in just under a week.
+        </p>
+
+        <p>
+          Back to the app... The running interface, while complicated in places, didn’t allow me really dig deep into
+          Swift, so I decided the app should initialize with the current and forecasted weather. I went with aviation
+          weather (NERD!) because it’s highly accurate and I understand METARs and TAFs. Making my code understand
+          them was... not as easy as I’d hoped. But I was able to make it work and the end result was fun because with
+          SwiftUI you get to see in dazzling images and colors the fruits of your labor.
+        </p>
+
+        <p>
+          The running interface allowed me to work with a 3rd party API, namely the
+          <a href={"https://github.com/polarofficial/polar-ble-sdk"}> Polar BLE SDK</a>. I also got to
+          play around with SwiftData to enable some user-defined settings and preferences. In doing so, the running
+          interface is fully customizable, giving the control back to the user.
+        </p>
+
+        <p>
+          You can check it out on my <a href={"https://github.com/Jordan-Gallivan/RunFree"}> GitHub</a>,
+          and after some local testing, I plan on deploying it to the Apple App Store for the experience.
+        </p>
+
+      </>
+    ),
+    img: <img className={"post-image"} src={require('../images/forest.gif')} alt={"Forrest Gump Running"} />,
+  },
+  {
     title: "React’ing to TypeScript",
     date: "28 August 2023",
     post: (

@@ -8,7 +8,7 @@ import { useDevice } from "../util/deviceHook";
  * Renders the blog posts.
  */
 export default function BlogPosts() {
-  const deviceType = useDevice();
+  const device = useDevice();
 
   const [postOpen, setPostOpen] = useState(false);
 
@@ -20,8 +20,8 @@ export default function BlogPosts() {
 
   return (
     <>
-      <div className={`top-row ${deviceType}`}>
-        <img className={`main-photo ${deviceType}`} src={require('../images/mainPhoto.jpeg')} alt={"F-18 Story Time"}/>
+      <div className={`top-row ${device.deviceType}`}>
+        <img className={`main-photo ${device.deviceType}`} src={require('../images/mainPhoto.jpeg')} alt={"F-18 Story Time"}/>
         <div>
           <PostComponent post={topPost} topRow={true} postOpen={postOpen} callBack={togglePostOpenState}/>
         </div>

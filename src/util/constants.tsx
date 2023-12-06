@@ -7,6 +7,13 @@ export enum DeviceTypes {
   MOBILE = 'mobile',    // width <= 600px
 }
 
+export enum ScreenHeight {
+  LARGE = 'large',  // > 1000
+  MEDIUM = 'medium',  //  600 < height < 1000
+  SMALL = 'small',    //  400 < height < 600
+  XSMALL = 'xsmall',  // < 400
+}
+
 export enum PageTypes {
   HOME = 'Home',
   ABOUT = 'About',

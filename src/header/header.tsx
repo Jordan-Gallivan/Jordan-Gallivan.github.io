@@ -11,15 +11,15 @@ import { useDevice } from "../util/deviceHook";
  */
 export default function Header(): ReactElement {
 
-  const deviceType = useDevice();
+  const device = useDevice();
 
   return (
     <div className={"header"}>
-      <div className={`title ${deviceType}`}>
+      <div className={`title ${device.deviceType}`}>
         <p>The Old Guy in the Front of Class</p>
       </div>
-      <div className={`links ${deviceType}`}>
-        { deviceType === DeviceTypes.DESKTOP
+      <div className={`links ${device.deviceType}`}>
+        { device.deviceType === DeviceTypes.DESKTOP
           ? <>
               <DesktopNavBar/>
               <Socials/>
